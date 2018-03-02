@@ -1,0 +1,6 @@
+framework module Pods_Hanafuda___Koi_Koi {
+  umbrella header "Pods-Hanafuda - Koi Koi-umbrella.h"
+
+  export *
+  module * { export * }
+}

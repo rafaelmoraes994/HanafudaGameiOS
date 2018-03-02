@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		530DFAA22011126300D71FFB /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DFAA12011126300D71FFB /* CardCollectionViewCell.swift */; };
+		530DFAA42011493800D71FFB /* CardCustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DFAA32011493800D71FFB /* CardCustomCollectionViewLayout.swift */; };
+		53156E8A2001468A00CC4C0C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53156E892001468A00CC4C0C /* GameController.swift */; };
+		53156E8C2001738F00CC4C0C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53156E8B2001738F00CC4C0C /* Settings.swift */; };
+		5318444920001986001551F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318444820001986001551F2 /* AppDelegate.swift */; };
+		5318444B20001986001551F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318444A20001986001551F2 /* MainViewController.swift */; };
+		5318444E20001986001551F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5318444C20001986001551F2 /* Main.storyboard */; };
+		5318445020001986001551F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5318444F20001986001551F2 /* Assets.xcassets */; };
+		5318445320001986001551F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5318445120001986001551F2 /* LaunchScreen.storyboard */; };
+		5318445B20002FFA001551F2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5318445A20002FFA001551F2 /* MainMenu.xib */; };
+		5318445D200030CC001551F2 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318445C200030CC001551F2 /* MainMenuView.swift */; };
+		5324EA8320091FF80042D060 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324EA8220091FF80042D060 /* GameBoardViewController.swift */; };
+		5324EA85200920910042D060 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324EA84200920910042D060 /* CardController.swift */; };
+		5324EA872009288B0042D060 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324EA862009288B0042D060 /* Player.swift */; };
+		5324EA89200929930042D060 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324EA88200929930042D060 /* Card.swift */; };
+		5330824220475E72005D314A /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5330824120475E72005D314A /* CardCell.xib */; };
+		5342272D200579BD0078B9D4 /* DealerContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5342272C200579BD0078B9D4 /* DealerContestViewController.swift */; };
+		C432081F28106880B96D4249 /* Pods_Hanafuda___Koi_Koi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218666C68D66B556761BF70A /* Pods_Hanafuda___Koi_Koi.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		218666C68D66B556761BF70A /* Pods_Hanafuda___Koi_Koi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Hanafuda___Koi_Koi.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B76C43D1482B504A0BB54E /* Pods-Hanafuda - Koi Koi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanafuda - Koi Koi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hanafuda - Koi Koi/Pods-Hanafuda - Koi Koi.debug.xcconfig"; sourceTree = "<group>"; };
+		530DFAA12011126300D71FFB /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		530DFAA32011493800D71FFB /* CardCustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		53156E892001468A00CC4C0C /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		53156E8B2001738F00CC4C0C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5318444520001986001551F2 /* Hanafuda - Koi Koi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hanafuda - Koi Koi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5318444820001986001551F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5318444A20001986001551F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5318444D20001986001551F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5318444F20001986001551F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5318445220001986001551F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5318445420001986001551F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5318445A20002FFA001551F2 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		5318445C200030CC001551F2 /* MainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		5324EA8220091FF80042D060 /* GameBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
+		5324EA84200920910042D060 /* CardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		5324EA862009288B0042D060 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5324EA88200929930042D060 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5330824120475E72005D314A /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		5342272C200579BD0078B9D4 /* DealerContestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerContestViewController.swift; sourceTree = "<group>"; };
+		E4F80A762DE10C8A91681288 /* Pods-Hanafuda - Koi Koi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanafuda - Koi Koi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hanafuda - Koi Koi/Pods-Hanafuda - Koi Koi.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5318444220001986001551F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C432081F28106880B96D4249 /* Pods_Hanafuda___Koi_Koi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5318443C20001986001551F2 = {
+			isa = PBXGroup;
+			children = (
+				5318444720001986001551F2 /* Hanafuda - Koi Koi */,
+				5318444620001986001551F2 /* Products */,
+				BCF323EC42D1D822D1B60EFA /* Pods */,
+				C91FD1D05A11263BD68C0327 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5318444620001986001551F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5318444520001986001551F2 /* Hanafuda - Koi Koi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5318444720001986001551F2 /* Hanafuda - Koi Koi */ = {
+			isa = PBXGroup;
+			children = (
+				5318444820001986001551F2 /* AppDelegate.swift */,
+				5318444A20001986001551F2 /* MainViewController.swift */,
+				5318444C20001986001551F2 /* Main.storyboard */,
+				5330824120475E72005D314A /* CardCell.xib */,
+				530DFAA12011126300D71FFB /* CardCollectionViewCell.swift */,
+				5324EA84200920910042D060 /* CardController.swift */,
+				5324EA8220091FF80042D060 /* GameBoardViewController.swift */,
+				530DFAA32011493800D71FFB /* CardCustomCollectionViewLayout.swift */,
+				5342272C200579BD0078B9D4 /* DealerContestViewController.swift */,
+				5318445A20002FFA001551F2 /* MainMenu.xib */,
+				5318445C200030CC001551F2 /* MainMenuView.swift */,
+				53156E8B2001738F00CC4C0C /* Settings.swift */,
+				53156E892001468A00CC4C0C /* GameController.swift */,
+				5324EA862009288B0042D060 /* Player.swift */,
+				5324EA88200929930042D060 /* Card.swift */,
+				5318444F20001986001551F2 /* Assets.xcassets */,
+				5318445120001986001551F2 /* LaunchScreen.storyboard */,
+				5318445420001986001551F2 /* Info.plist */,
+			);
+			path = "Hanafuda - Koi Koi";
+			sourceTree = "<group>";
+		};
+		BCF323EC42D1D822D1B60EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23B76C43D1482B504A0BB54E /* Pods-Hanafuda - Koi Koi.debug.xcconfig */,
+				E4F80A762DE10C8A91681288 /* Pods-Hanafuda - Koi Koi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C91FD1D05A11263BD68C0327 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				218666C68D66B556761BF70A /* Pods_Hanafuda___Koi_Koi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5318444420001986001551F2 /* Hanafuda - Koi Koi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5318445720001986001551F2 /* Build configuration list for PBXNativeTarget "Hanafuda - Koi Koi" */;
+			buildPhases = (
+				8DD5D2B3C660BC649EBEEF50 /* [CP] Check Pods Manifest.lock */,
+				5318444120001986001551F2 /* Sources */,
+				5318444220001986001551F2 /* Frameworks */,
+				5318444320001986001551F2 /* Resources */,
+				871B1DB859E6EA7EE31C853D /* [CP] Embed Pods Frameworks */,
+				144F6BA39F58DC66BB009F82 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hanafuda - Koi Koi";
+			productName = "Hanafuda - Koi Koi";
+			productReference = 5318444520001986001551F2 /* Hanafuda - Koi Koi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5318443D20001986001551F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Rafael;
+				TargetAttributes = {
+					5318444420001986001551F2 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = VTP6AJK3DG;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5318444020001986001551F2 /* Build configuration list for PBXProject "Hanafuda - Koi Koi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5318443C20001986001551F2;
+			productRefGroup = 5318444620001986001551F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5318444420001986001551F2 /* Hanafuda - Koi Koi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5318444320001986001551F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5318445320001986001551F2 /* LaunchScreen.storyboard in Resources */,
+				5330824220475E72005D314A /* CardCell.xib in Resources */,
+				5318445020001986001551F2 /* Assets.xcassets in Resources */,
+				5318444E20001986001551F2 /* Main.storyboard in Resources */,
+				5318445B20002FFA001551F2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		144F6BA39F58DC66BB009F82 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hanafuda - Koi Koi/Pods-Hanafuda - Koi Koi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		871B1DB859E6EA7EE31C853D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hanafuda - Koi Koi/Pods-Hanafuda - Koi Koi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CPCollectionViewKit/CPCollectionViewKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SpriteKitAutoLayout/SpriteKitAutoLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CPCollectionViewKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpriteKitAutoLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hanafuda - Koi Koi/Pods-Hanafuda - Koi Koi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DD5D2B3C660BC649EBEEF50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hanafuda - Koi Koi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5318444120001986001551F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5318445D200030CC001551F2 /* MainMenuView.swift in Sources */,
+				530DFAA42011493800D71FFB /* CardCustomCollectionViewLayout.swift in Sources */,
+				53156E8A2001468A00CC4C0C /* GameController.swift in Sources */,
+				5318444B20001986001551F2 /* MainViewController.swift in Sources */,
+				530DFAA22011126300D71FFB /* CardCollectionViewCell.swift in Sources */,
+				5318444920001986001551F2 /* AppDelegate.swift in Sources */,
+				5324EA8320091FF80042D060 /* GameBoardViewController.swift in Sources */,
+				5324EA85200920910042D060 /* CardController.swift in Sources */,
+				5342272D200579BD0078B9D4 /* DealerContestViewController.swift in Sources */,
+				5324EA89200929930042D060 /* Card.swift in Sources */,
+				5324EA872009288B0042D060 /* Player.swift in Sources */,
+				53156E8C2001738F00CC4C0C /* Settings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5318444C20001986001551F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5318444D20001986001551F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5318445120001986001551F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5318445220001986001551F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5318445520001986001551F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5318445620001986001551F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5318445820001986001551F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B76C43D1482B504A0BB54E /* Pods-Hanafuda - Koi Koi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VTP6AJK3DG;
+				INFOPLIST_FILE = "Hanafuda - Koi Koi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "learning.ios.Hanafuda---Koi-Koi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5318445920001986001551F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F80A762DE10C8A91681288 /* Pods-Hanafuda - Koi Koi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VTP6AJK3DG;
+				INFOPLIST_FILE = "Hanafuda - Koi Koi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "learning.ios.Hanafuda---Koi-Koi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5318444020001986001551F2 /* Build configuration list for PBXProject "Hanafuda - Koi Koi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5318445520001986001551F2 /* Debug */,
+				5318445620001986001551F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5318445720001986001551F2 /* Build configuration list for PBXNativeTarget "Hanafuda - Koi Koi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5318445820001986001551F2 /* Debug */,
+				5318445920001986001551F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5318443D20001986001551F2 /* Project object */;
+}

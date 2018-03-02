@@ -1,0 +1,6 @@
+framework module CPCollectionViewKit {
+  umbrella header "CPCollectionViewKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

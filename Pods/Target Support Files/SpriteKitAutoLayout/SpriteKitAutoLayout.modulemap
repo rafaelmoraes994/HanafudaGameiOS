@@ -1,0 +1,6 @@
+framework module SpriteKitAutoLayout {
+  umbrella header "SpriteKitAutoLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}

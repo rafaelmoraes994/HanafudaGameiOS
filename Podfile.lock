@@ -1,0 +1,31 @@
+PODS:
+  - CPCollectionViewKit (0.1.0)
+  - DropDown (2.3.1)
+  - PureLayout (3.0.2)
+  - SpriteKitAutoLayout (0.3.1)
+
+DEPENDENCIES:
+  - CPCollectionViewKit (from `https://github.com/ParsifalC/CPCollectionViewKit`, branch `master`)
+  - DropDown
+  - PureLayout (~> 3.0)
+  - SpriteKitAutoLayout
+
+EXTERNAL SOURCES:
+  CPCollectionViewKit:
+    :branch: master
+    :git: https://github.com/ParsifalC/CPCollectionViewKit
+
+CHECKOUT OPTIONS:
+  CPCollectionViewKit:
+    :commit: e19c1827ea96dfbd21d27b482ca5ad6cd334c05a
+    :git: https://github.com/ParsifalC/CPCollectionViewKit
+
+SPEC CHECKSUMS:
+  CPCollectionViewKit: 0ef29d2e604bd333e0cad2514d3c73809b42e0a7
+  DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SpriteKitAutoLayout: a842674b1d76674eb3204632055538b2dcda5ed1
+
+PODFILE CHECKSUM: 615eb46f691c2046b081a854f0123586834fdf32
+
+COCOAPODS: 1.3.1
