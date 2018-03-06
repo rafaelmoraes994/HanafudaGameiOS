@@ -14,10 +14,24 @@ extension Array {
         for i in stride(from: count - 1, through: 1, by: -1) {
             let j = Int(arc4random_uniform(UInt32(i+1)))
             if i != j {
-                swap(&self[i], &self[j])
+                self.swapAt(i, j)
             }
         }
     }
+}
+
+enum CardPosition: Int {
+    case PlayerHand
+    case OpponentHand
+    case PlayerSpecial
+    case PlayerAnimal
+    case PlayerRibbon
+    case PlayerCommon
+    case OpponentSpecial
+    case OpponentAnimal
+    case OpponentRibbon
+    case OpponentCommon
+    case TableCard
 }
 
 
@@ -39,9 +53,8 @@ class GameController {
     
     var deck: [Card] = []
     
-    var tableCards: [Card] = []
-    
-    
+    var cardPositionArrays: [[Card]] = []
+       
     func initializeDeck(){
         for i in 0...monthCardNames.count-1 {
             for j in 0...3{
@@ -51,19 +64,45 @@ class GameController {
         deck.shuffle()
     }
     
-    func initializeTableCards (){
-        
+    func initializeGame () {
+        initializeDeck()
+        initializeCardPositionArrays()
+        initializeTableCards()
+        initializePlayersCards()
     }
     
-    func testDeck(){
-        for i in 0...deck.count-1 {
-            print(deck[i].month)
+    func initializeCardPositionArrays(){
+        for _ in 0...CardPosition.TableCard.rawValue {
+            cardPositionArrays.append([])
+        }
+    }
+    
+    func initializeTableCards(){
+        for _ in 0..<8 {
+            cardPositionArrays[CardPosition.TableCard.rawValue].append(deck.remove(at: 0))
+        }
+    }
+    
+    func initializePlayersCards(){
+        for _ in 0..<8 {
+            cardPositionArrays[CardPosition.PlayerHand.rawValue].append(deck.remove(at: 0))
+            cardPositionArrays[CardPosition.OpponentHand.rawValue].append(deck.remove(at: 0))
         }
     }
     
     func initializePlayers (dealer: String, opponent: String){
         currentPlayer = Player(name: dealer, handCards: [], comboCards: [])
         nextPlayer = Player(name: opponent, handCards: [], comboCards: [])
+    }
+    
+    func checkMatchExistance(card: Card) -> Bool{
+        var tableCards = cardPositionArrays[CardPosition.TableCard.rawValue]
+        for i in 0..<tableCards.count {
+            if card.month == tableCards[i].month {
+                return true
+            }
+        }
+        return false
     }
     
 }

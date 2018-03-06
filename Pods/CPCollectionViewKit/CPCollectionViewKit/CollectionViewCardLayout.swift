@@ -109,6 +109,7 @@ open class CollectionViewCardLayout: CollectionViewLayout {
         attributes.transform3D = transform3D
         attributes.zIndex = (itemOffset<0.5 && itemOffset > -0.5) ? 1000 : Int(item)
         
+//        print("index:\(item) topItemIndex:\(topItemIndex) itemOffset:\(itemOffset)")
         return attributes
     }
     

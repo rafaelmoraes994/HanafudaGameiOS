@@ -24,6 +24,10 @@
 		5324EA89200929930042D060 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324EA88200929930042D060 /* Card.swift */; };
 		5330824220475E72005D314A /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5330824120475E72005D314A /* CardCell.xib */; };
 		5342272D200579BD0078B9D4 /* DealerContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5342272C200579BD0078B9D4 /* DealerContestViewController.swift */; };
+		538D87C0204A1401007D17A5 /* KDDragAndDropManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D87BE204A1401007D17A5 /* KDDragAndDropManager.swift */; };
+		538D87C1204A1401007D17A5 /* KDDragAndDropCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D87BF204A1401007D17A5 /* KDDragAndDropCollectionView.swift */; };
+		538D87C3204A406D007D17A5 /* TableCardCollectionViewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D87C2204A406D007D17A5 /* TableCardCollectionViewCollectionViewController.swift */; };
+		53D798BB204DF9090056E760 /* DragAndDropManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D798BA204DF9090056E760 /* DragAndDropManager.swift */; };
 		C432081F28106880B96D4249 /* Pods_Hanafuda___Koi_Koi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218666C68D66B556761BF70A /* Pods_Hanafuda___Koi_Koi.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,10 @@
 		5324EA88200929930042D060 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		5330824120475E72005D314A /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		5342272C200579BD0078B9D4 /* DealerContestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerContestViewController.swift; sourceTree = "<group>"; };
+		538D87BE204A1401007D17A5 /* KDDragAndDropManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDDragAndDropManager.swift; sourceTree = "<group>"; };
+		538D87BF204A1401007D17A5 /* KDDragAndDropCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDDragAndDropCollectionView.swift; sourceTree = "<group>"; };
+		538D87C2204A406D007D17A5 /* TableCardCollectionViewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCardCollectionViewCollectionViewController.swift; sourceTree = "<group>"; };
+		53D798BA204DF9090056E760 /* DragAndDropManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropManager.swift; sourceTree = "<group>"; };
 		E4F80A762DE10C8A91681288 /* Pods-Hanafuda - Koi Koi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanafuda - Koi Koi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hanafuda - Koi Koi/Pods-Hanafuda - Koi Koi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +99,9 @@
 				5330824120475E72005D314A /* CardCell.xib */,
 				530DFAA12011126300D71FFB /* CardCollectionViewCell.swift */,
 				5324EA84200920910042D060 /* CardController.swift */,
+				53D798BA204DF9090056E760 /* DragAndDropManager.swift */,
 				5324EA8220091FF80042D060 /* GameBoardViewController.swift */,
+				538D87C2204A406D007D17A5 /* TableCardCollectionViewCollectionViewController.swift */,
 				530DFAA32011493800D71FFB /* CardCustomCollectionViewLayout.swift */,
 				5342272C200579BD0078B9D4 /* DealerContestViewController.swift */,
 				5318445A20002FFA001551F2 /* MainMenu.xib */,
@@ -102,9 +112,27 @@
 				5324EA88200929930042D060 /* Card.swift */,
 				5318444F20001986001551F2 /* Assets.xcassets */,
 				5318445120001986001551F2 /* LaunchScreen.storyboard */,
+				538D87B8204A139A007D17A5 /* External */,
 				5318445420001986001551F2 /* Info.plist */,
 			);
 			path = "Hanafuda - Koi Koi";
+			sourceTree = "<group>";
+		};
+		538D87B8204A139A007D17A5 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				538D87B9204A13AF007D17A5 /* KDDragAndDropCollectionView */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		538D87B9204A13AF007D17A5 /* KDDragAndDropCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				538D87BF204A1401007D17A5 /* KDDragAndDropCollectionView.swift */,
+				538D87BE204A1401007D17A5 /* KDDragAndDropManager.swift */,
+			);
+			path = KDDragAndDropCollectionView;
 			sourceTree = "<group>";
 		};
 		BCF323EC42D1D822D1B60EFA /* Pods */ = {
@@ -266,14 +294,18 @@
 				530DFAA42011493800D71FFB /* CardCustomCollectionViewLayout.swift in Sources */,
 				53156E8A2001468A00CC4C0C /* GameController.swift in Sources */,
 				5318444B20001986001551F2 /* MainViewController.swift in Sources */,
+				53D798BB204DF9090056E760 /* DragAndDropManager.swift in Sources */,
 				530DFAA22011126300D71FFB /* CardCollectionViewCell.swift in Sources */,
 				5318444920001986001551F2 /* AppDelegate.swift in Sources */,
 				5324EA8320091FF80042D060 /* GameBoardViewController.swift in Sources */,
+				538D87C0204A1401007D17A5 /* KDDragAndDropManager.swift in Sources */,
 				5324EA85200920910042D060 /* CardController.swift in Sources */,
 				5342272D200579BD0078B9D4 /* DealerContestViewController.swift in Sources */,
+				538D87C1204A1401007D17A5 /* KDDragAndDropCollectionView.swift in Sources */,
 				5324EA89200929930042D060 /* Card.swift in Sources */,
 				5324EA872009288B0042D060 /* Player.swift in Sources */,
 				53156E8C2001738F00CC4C0C /* Settings.swift in Sources */,
+				538D87C3204A406D007D17A5 /* TableCardCollectionViewCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

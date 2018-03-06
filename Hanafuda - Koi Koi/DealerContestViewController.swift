@@ -100,7 +100,6 @@ class DealerContestViewController: UIViewController {
         titleMessage.text = "Game will start in:  " + String(countdownTimer)
         
         if countdownTimer == 0 {
-            GameController.shared.initializeDeck()
             startGameTimer.invalidate()
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameBoard") as! GameBoardViewController
             self.present(vc, animated: false, completion: nil)

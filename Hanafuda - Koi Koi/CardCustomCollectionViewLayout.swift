@@ -53,49 +53,51 @@ class CardCustomCollectionViewLayout: CollectionViewCardLayout {
         let secondCenterCard = CGFloat(numberOfItems/2-1)
         var cardHeightPosition = 0.0
         
-        //case even hand
-        if numberOfItems % 2 == 0 {
-            if item == secondCenterCard {
-                rotateFactor = -0.05
-            } else if item == centerCard {
-                rotateFactor = 0.05
-            } else {
-                if item > centerCard {
-                    rotateFactor = configuration.rotateFactor*(item - centerCard)
-                    cardHeightPosition = pow(2,Double(item - centerCard))
-                    if item != centerCard+1 {
-                        cardHeightPosition = cardHeightPosition + pow(2,Double(item - centerCard))
-                    }
-                } else if item < secondCenterCard{
-                    rotateFactor = -configuration.rotateFactor*(secondCenterCard - item)
-                    cardHeightPosition = pow(2,Double(secondCenterCard - item))
-                    if item != secondCenterCard-1 {
-                        cardHeightPosition = cardHeightPosition + pow(2,Double(secondCenterCard - item))
+        if configuration.rotateFactor != 0 {
+            //case even hand
+            if numberOfItems % 2 == 0 {
+                if item == secondCenterCard {
+                    rotateFactor = -0.05
+                } else if item == centerCard {
+                    rotateFactor = 0.05
+                } else {
+                    if item > centerCard {
+                        rotateFactor = configuration.rotateFactor*(item - centerCard)
+                        cardHeightPosition = pow(2,Double(item - centerCard))
+                        if item != centerCard+1 {
+                            cardHeightPosition = cardHeightPosition + pow(2,Double(item - centerCard))
+                        }
+                    } else if item < secondCenterCard{
+                        rotateFactor = -configuration.rotateFactor*(secondCenterCard - item)
+                        cardHeightPosition = pow(2,Double(secondCenterCard - item))
+                        if item != secondCenterCard-1 {
+                            cardHeightPosition = cardHeightPosition + pow(2,Double(secondCenterCard - item))
+                        }
                     }
                 }
+                //case odd hand
+            } else if item != centerCard {
+                cardHeightPosition = pow(2,abs(Double(item - centerCard)))
+                rotateFactor = configuration.rotateFactor*(item - centerCard)
+                if item != centerCard+1 && item != centerCard-1 {
+                    cardHeightPosition = cardHeightPosition + pow(2,abs(Double(item - centerCard)))
+                }
             }
-        //case odd hand
-        } else if item != centerCard {
-            cardHeightPosition = pow(2,abs(Double(item - centerCard)))
-            rotateFactor = configuration.rotateFactor*(item - centerCard)
-            if item != centerCard+1 && item != centerCard-1 {
-                cardHeightPosition = cardHeightPosition + pow(2,abs(Double(item - centerCard)))
+            
+            //var cardHeightPostion = 2*abs(Double((item - CGFloat(centerCard))))
+            
+            if numberOfItems % 2 == 0 {
+                if item == 0 || item == 7 {
+                    cardHeightPosition = cardHeightPosition + 2
+                }
+            } else if item == 0 || item == 6 {
+                cardHeightPosition = cardHeightPosition + 2
             }
         }
         
         var transform3D = CATransform3DIdentity
         transform3D.m34 = -1/550
         transform3D = CATransform3DScale(transform3D, scaleFactorX, scaleFactorY, 1)
-        
-        //var cardHeightPostion = 2*abs(Double((item - CGFloat(centerCard))))
-        
-        if numberOfItems % 2 == 0 {
-            if item == 0 || item == 7 {
-                cardHeightPosition = cardHeightPosition + 2
-            }
-        } else if item == 0 || item == 6 {
-            cardHeightPosition = cardHeightPosition + 2
-        }
         
         transform3D = CATransform3DTranslate(transform3D, 0, CGFloat(cardHeightPosition), 0)
         

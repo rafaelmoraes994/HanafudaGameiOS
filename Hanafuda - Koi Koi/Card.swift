@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Card {
+class Card: Equatable {
     
     var image: UIImage
     var month: String
@@ -17,6 +17,10 @@ class Card {
     init(image: UIImage, month: String) {
         self.image = image
         self.month = month
+    }
+    
+    static func ==(lhs: Card, rhs: Card) -> Bool {
+        return lhs.image == rhs.image
     }
     
 }
