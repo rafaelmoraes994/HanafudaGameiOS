@@ -11,7 +11,11 @@ import UIKit
 class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cardImage: UIImageView!
     
-    var shouldAnimate = false
+    var shouldAnimate = false {
+        didSet {
+            manageAnimation()
+        }
+    }
     
     override func prepareForReuse() {
         CardController.shared.resetCardLayerDesign(card: self)
@@ -19,7 +23,10 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        manageAnimation()
+    }
+    
+    func manageAnimation(){
         self.layer.removeAllAnimations()
         if shouldAnimate {
             let delayTime = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)

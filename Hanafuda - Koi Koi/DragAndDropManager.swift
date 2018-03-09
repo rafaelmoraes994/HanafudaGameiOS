@@ -11,6 +11,7 @@ import UIKit
 protocol GameCardMovement {
     func didStartLongPress()
     func didStopLongPress()
+    func didChangeSelectedIndex(_ indexPath: IndexPath)
 }
 
 class DragAndDropManager: KDDragAndDropManager {
@@ -69,13 +70,13 @@ class DragAndDropManager: KDDragAndDropManager {
                 
             }
             
-            
-            
             if let droppable = mainOverView as? KDDroppable {
                 
                 let rect = self.canvas.convert(bundle.representationImageView.frame, to: mainOverView)
                 
-                if droppable.canDropAtRect(rect) {
+                if let newIndexPath = droppable.indexPathForCellOverlappingRect(rect) {
+                    
+                    delegate?.didChangeSelectedIndex(newIndexPath)
                     
                     if mainOverView != bundle.overDroppableView { // if it is the first time we are entering
                         
@@ -90,7 +91,6 @@ class DragAndDropManager: KDDragAndDropManager {
                     
                 }
             }
-            
             
         case .ended :
             

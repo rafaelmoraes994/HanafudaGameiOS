@@ -16,14 +16,6 @@ class CardController {
     
     let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
     
-    func setPulseAnimations(card: UIButton){
-        pulseAnimation.duration = 0.8
-        pulseAnimation.toValue = 1
-        pulseAnimation.autoreverses = true
-        pulseAnimation.repeatCount = Float.infinity
-        card.layer.add(pulseAnimation, forKey: nil)
-    }
-    
     func setPulseAnimations(card: UIView){
         pulseAnimation.duration = 0.8
         pulseAnimation.toValue = 1.1
@@ -32,22 +24,13 @@ class CardController {
         card.layer.add(pulseAnimation, forKey: nil)
     }
     
-    func setCardLayerDesign(card: UICollectionViewCell){
+    func setCardLayerDesign(card: UIView, shadowRadius: CGFloat, borderWidth: CGFloat){
         card.layer.shadowColor = GameController.shared.pink.cgColor
-        card.layer.shadowRadius = 3.0
+        card.layer.shadowRadius = shadowRadius
         card.layer.shadowOpacity = 1.0
         card.layer.shadowOffset = CGSize(width: 0, height: 0)
         card.layer.borderColor = GameController.shared.pink.cgColor
-        card.layer.borderWidth = 2.0
-    }
-    
-    func setCardLayerDesign(card: UIButton){
-        card.layer.shadowColor = GameController.shared.pink.cgColor
-        card.layer.shadowRadius = 5.0
-        card.layer.shadowOpacity = 1.0
-        card.layer.shadowOffset = CGSize(width: 0, height: 0)
-        card.layer.borderColor = GameController.shared.pink.cgColor
-        card.layer.borderWidth = 3.0
+        card.layer.borderWidth = borderWidth
     }
     
     func resetCardLayerDesign(card: UIView){

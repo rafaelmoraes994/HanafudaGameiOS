@@ -49,6 +49,7 @@ protocol KDDroppable {
     func didMoveItem(_ item : AnyObject, inRect rect : CGRect) -> Void
     func didMoveOutItem(_ item : AnyObject) -> Void
     func dropDataItem(_ item : AnyObject, atRect : CGRect) -> Void
+    func indexPathForCellOverlappingRect( _ rect : CGRect) -> IndexPath?
 }
 
 class KDDragAndDropManager: NSObject, UIGestureRecognizerDelegate {
@@ -216,6 +217,7 @@ class KDDragAndDropManager: NSObject, UIGestureRecognizerDelegate {
             
             bundle.representationImageView.removeFromSuperview()
             sourceDraggable.stopDragging()
+            
             
         default:
             break

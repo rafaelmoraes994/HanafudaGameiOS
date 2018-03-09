@@ -1,4 +1,4 @@
-//
+    //
 //  GameBoardViewController.swift
 //  Hanafuda - Koi Koi
 //
@@ -43,7 +43,6 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
         initializeCollectionViews()
     }
     
-//    func initializeCollectionLayout(collectionView: UICollectionView, spacing: Int, rotateFactor: Float, cellWidth: Int, cellHeight: Int){
     func initializeCollectionLayout(collectionView: UICollectionView) {
         let layout = collectionView.collectionViewLayout as! CardCustomCollectionViewLayout
         layout.updateAnimationStyle = .custom
@@ -134,10 +133,15 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
         } else if collectionView.tag == CardPosition.PlayerHand.rawValue {
             cell.cardImage.image = card.image
             if GameController.shared.checkMatchExistance(card: card) {
-                CardController.shared.setCardLayerDesign(card: cell)
+                CardController.shared.setCardLayerDesign(card: cell, shadowRadius: 3.0, borderWidth: 2.0)
             }
             if indexPath.row == selectedCard {
-                cell.shouldAnimate = true
+                if let cv = collectionView as? KDDragAndDropCollectionView {
+                    if cv.shouldAnimate == true {
+                        cell.shouldAnimate = true
+                        print("CellForItem \(indexPath.row) \(cell)")
+                    }
+                }
             }
         } else {
             cell.cardImage.image = GameController.shared.cardPositionArrays[collectionView.tag][indexPath.row].image
@@ -190,11 +194,18 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
     }
     
     func didStartLongPress() {
-        print("1")
+        print("Start")
     }
     
     func didStopLongPress() {
-        print("2")
+        print("Stop")
+    }
+    
+    func didChangeSelectedIndex(_ indexPath: IndexPath) {
+        if let cardLayout = playerHandCards.collectionViewLayout as? CardCustomCollectionViewLayout {
+            cardLayout.selectedIndex = CGFloat(indexPath.row)
+            selectedCard = Int(cardLayout.selectedIndex)
+        }
     }
     
 //    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {

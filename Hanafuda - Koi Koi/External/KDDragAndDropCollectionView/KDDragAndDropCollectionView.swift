@@ -47,6 +47,8 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
     var iDataSource : UICollectionViewDataSource?
     var iDelegate : UICollectionViewDelegate?
     
+    var shouldAnimate = true
+    
     override func awakeFromNib() {
         super.awakeFromNib()
      
@@ -83,9 +85,7 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         UIGraphicsEndImageContext()
         
         let imageView = UIImageView(image: image)
-        print(imageView.frame)
         imageView.frame.origin = cell.frame.origin
-        print(imageView.frame)
         
         return imageView
     }
@@ -109,8 +109,10 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         
         self.draggingPathOfCellBeingDragged = self.indexPathForItem(at: point)
         
-        self.reloadData()
+        //StopAllAnimationsWhileDragging
+        self.shouldAnimate = false
         
+        self.reloadData()
     }
     
     func stopDragging() -> Void {
@@ -122,6 +124,9 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         }
         
         self.draggingPathOfCellBeingDragged = nil
+        
+        //ComeBackAnimations
+        self.shouldAnimate = true
         
         self.reloadData()
         
@@ -195,7 +200,6 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         }
         
         if let cellRetrieved = cellCandidate {
-            
             return self.indexPath(for: cellRetrieved)
         }
         
@@ -233,10 +237,7 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
                       
                         self.reloadData()
                     }
-                    
-                    
                 })
-            
         }
         
         currentInRect = rect
@@ -309,7 +310,7 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
         let dragDropDS = self.dataSource as! KDDragAndDropCollectionViewDataSource // guaranteed to have a ds
         
         if  let existingIndexPath = dragDropDS.collectionView(self, indexPathForDataItem: item),
-            let indexPath = self.indexPathForCellOverlappingRect(rect) {
+            let indexPath = self.indexPathForCellOverlappingRect(rect){
    
                 if indexPath.item != existingIndexPath.item {
                     
@@ -322,7 +323,6 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
                         }, completion: { (finished) -> Void in
                             self.animating = false
                             self.reloadData()
-                            
                         })
                     
                     self.draggingPathOfCellBeingDragged = indexPath

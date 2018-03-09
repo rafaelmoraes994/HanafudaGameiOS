@@ -79,12 +79,12 @@ class DealerContestViewController: UIViewController {
                 finished in
                 if (chosenCard == "left" && leftCardMonthIndex > rightCardMonthIndex) || (chosenCard == "right" && rightCardMonthIndex > leftCardMonthIndex) {
                         self.resultMessage.text = "Congrats! You start as the Dealer!"
-                        CardController.shared.setCardLayerDesign(card: chosenCardButton)
+                        CardController.shared.setCardLayerDesign(card: chosenCardButton, shadowRadius: 5.0, borderWidth: 3.0)
                         CardController.shared.setPulseAnimations(card: chosenCardButton)
                         GameController.shared.initializePlayers(dealer: "user", opponent: "computer")
                     } else{
                         self.resultMessage.text = "Opponent player start as the Dealer"
-                        CardController.shared.setCardLayerDesign(card: nonChosenCardButton)
+                        CardController.shared.setCardLayerDesign(card: nonChosenCardButton, shadowRadius: 5.0, borderWidth: 3.0)
                         CardController.shared.setPulseAnimations(card: nonChosenCardButton)
                         GameController.shared.initializePlayers(dealer: "computer", opponent: "user")
                     }
