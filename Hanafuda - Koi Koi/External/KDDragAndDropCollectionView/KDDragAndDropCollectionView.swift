@@ -149,7 +149,6 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
             self.deleteItems(at: [existngIndexPath])
         }
         else {
-            
             self.animating = true
             self.performBatchUpdates({ () -> Void in
                 self.deleteItems(at: [existngIndexPath])
@@ -363,7 +362,13 @@ class KDDragAndDropCollectionView: UICollectionView, KDDraggable, KDDroppable {
                 self.deleteItems(at: [existngIndexPath])
             }, completion: { (finished) -> Void in
                 self.animating = false;
-                self.reloadData()
+                let previousLeftInset = self.contentInset.left
+                let leftInset = CGFloat(8 - self.numberOfItems(inSection: 0))*15 + 20
+                let collectionViewInsets = UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: 0)
+                self.contentInset = collectionViewInsets
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.contentOffset.x -= leftInset - previousLeftInset
+                })
             })
             
         }

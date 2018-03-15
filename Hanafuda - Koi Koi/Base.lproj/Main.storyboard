@@ -166,10 +166,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eHU-LK-CTt" userLabel="PlayerHandCards" customClass="KDDragAndDropCollectionView" customModule="Hanafuda___Koi_Koi" customModuleProvider="target">
-                                <rect key="frame" x="98" y="232" width="400" height="96"/>
+                                <rect key="frame" x="123" y="232" width="350" height="96"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="0Le-1j-4fl"/>
+                                    <constraint firstAttribute="width" constant="350" id="0Le-1j-4fl"/>
                                     <constraint firstAttribute="height" constant="96" id="Io0-8V-lng"/>
                                 </constraints>
                                 <collectionViewLayout key="collectionViewLayout" id="27v-HC-fsu" customClass="CardCustomCollectionViewLayout" customModule="Hanafuda___Koi_Koi" customModuleProvider="target"/>
@@ -183,7 +183,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="4M5-r8-jPZ">
-                                        <rect key="frame" x="70" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="60" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -191,7 +191,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="V6b-bq-Jsm">
-                                        <rect key="frame" x="140" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="120" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -199,7 +199,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="fFT-XV-mnM">
-                                        <rect key="frame" x="210" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="180" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -207,7 +207,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HTP-VS-8zX">
-                                        <rect key="frame" x="280" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="240" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -215,7 +215,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7kO-V4-BEa">
-                                        <rect key="frame" x="350" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="300" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -231,7 +231,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YjL-1y-g7Z">
-                                        <rect key="frame" x="70" y="60" width="50" height="50"/>
+                                        <rect key="frame" x="60" y="60" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -253,7 +253,7 @@
                                 </constraints>
                                 <collectionViewLayout key="collectionViewLayout" id="Lqz-Ck-FRc" customClass="CardCustomCollectionViewLayout" customModule="Hanafuda___Koi_Koi" customModuleProvider="target"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="cardCell" id="iaY-vx-VNM">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="" id="iaY-vx-VNM">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -453,7 +453,7 @@
                                 </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TOZ-cM-PmM" userLabel="TableCards" customClass="TableCardCollectionViewCollectionViewController" customModule="Hanafuda___Koi_Koi" customModuleProvider="target">
-                                <rect key="frame" x="159" y="66" width="220" height="102"/>
+                                <rect key="frame" x="174" y="66" width="220" height="102"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="6k3-hJ-OWt"/>
@@ -777,7 +777,7 @@
                                 </connections>
                             </collectionView>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kXY-4w-rb9" userLabel="OpponentHandCards">
-                                <rect key="frame" x="98" y="-50" width="400" height="96"/>
+                                <rect key="frame" x="123" y="-50" width="350" height="96"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="ZGE-20-5hm" customClass="CardCustomCollectionViewLayout" customModule="Hanafuda___Koi_Koi" customModuleProvider="target"/>
                                 <cells>
@@ -790,7 +790,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ged-aV-vZ5">
-                                        <rect key="frame" x="70" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="60" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -798,7 +798,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Gru-5f-VlT">
-                                        <rect key="frame" x="140" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="120" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -806,7 +806,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ibs-nz-37g">
-                                        <rect key="frame" x="210" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="180" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -814,7 +814,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="b31-xE-dnd">
-                                        <rect key="frame" x="280" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="240" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -822,7 +822,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QuN-5j-oQa">
-                                        <rect key="frame" x="350" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="300" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -838,7 +838,7 @@
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gRk-zV-keK">
-                                        <rect key="frame" x="70" y="60" width="50" height="50"/>
+                                        <rect key="frame" x="60" y="60" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -852,7 +852,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P3-YQ-jbC" userLabel="Deck">
-                                <rect key="frame" x="113" y="93" width="30" height="48"/>
+                                <rect key="frame" x="128" y="93" width="30" height="48"/>
                                 <color key="backgroundColor" red="0.96665507555007935" green="0.020222363993525505" blue="0.8843960165977478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="MXU-lN-JQt"/>
@@ -868,13 +868,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wR5-Aq-hQE" firstAttribute="leading" secondItem="nSH-8S-k40" secondAttribute="trailing" constant="16" id="1GE-6F-C5b"/>
+                            <constraint firstItem="TOZ-cM-PmM" firstAttribute="centerX" secondItem="i3K-F6-pH5" secondAttribute="centerX" id="1hv-rf-PYh"/>
                             <constraint firstItem="B6G-F8-BHt" firstAttribute="height" secondItem="i3K-F6-pH5" secondAttribute="height" id="2xR-qj-a2j"/>
                             <constraint firstItem="Ww0-HM-6oM" firstAttribute="bottom" secondItem="kXY-4w-rb9" secondAttribute="top" constant="50" id="47I-we-Jd3"/>
                             <constraint firstItem="yIf-Aa-Jzv" firstAttribute="leading" secondItem="bJ5-Cf-HD7" secondAttribute="trailing" constant="16" id="6uc-HZ-qDx"/>
                             <constraint firstItem="ocb-qo-Iw5" firstAttribute="width" secondItem="wR5-Aq-hQE" secondAttribute="width" id="91x-cy-Qs0"/>
                             <constraint firstItem="nSH-8S-k40" firstAttribute="height" secondItem="kV9-jH-Lmx" secondAttribute="height" id="9fv-7j-YKH"/>
                             <constraint firstItem="eHU-LK-CTt" firstAttribute="centerY" secondItem="i3K-F6-pH5" secondAttribute="centerY" multiplier="1.75" id="A0P-U2-vNt"/>
-                            <constraint firstItem="TOZ-cM-PmM" firstAttribute="leading" secondItem="1P3-YQ-jbC" secondAttribute="trailing" constant="16" id="BvU-VX-uJb"/>
                             <constraint firstItem="kV9-jH-Lmx" firstAttribute="leading" secondItem="i3K-F6-pH5" secondAttribute="leading" constant="40" id="E6D-Sb-fA0"/>
                             <constraint firstItem="B6G-F8-BHt" firstAttribute="centerY" secondItem="i3K-F6-pH5" secondAttribute="centerY" id="GZy-wt-BSs"/>
                             <constraint firstItem="3OM-Gc-kYo" firstAttribute="height" secondItem="0iY-sU-DR5" secondAttribute="height" id="KEz-NV-72N"/>
@@ -889,7 +889,7 @@
                             <constraint firstItem="3OM-Gc-kYo" firstAttribute="centerY" secondItem="0iY-sU-DR5" secondAttribute="centerY" id="WPr-og-ys2"/>
                             <constraint firstItem="nSH-8S-k40" firstAttribute="width" secondItem="kV9-jH-Lmx" secondAttribute="width" id="WqL-lo-TeN"/>
                             <constraint firstItem="3OM-Gc-kYo" firstAttribute="width" secondItem="0iY-sU-DR5" secondAttribute="width" id="ahJ-dC-8qq"/>
-                            <constraint firstItem="1P3-YQ-jbC" firstAttribute="centerX" secondItem="i3K-F6-pH5" secondAttribute="centerX" multiplier="0.45" id="ca6-9m-WAW"/>
+                            <constraint firstItem="TOZ-cM-PmM" firstAttribute="leading" secondItem="1P3-YQ-jbC" secondAttribute="trailing" constant="16" id="cml-eO-z2u"/>
                             <constraint firstItem="yIf-Aa-Jzv" firstAttribute="centerY" secondItem="bJ5-Cf-HD7" secondAttribute="centerY" id="d3e-cW-LC7"/>
                             <constraint firstItem="nSH-8S-k40" firstAttribute="centerY" secondItem="kV9-jH-Lmx" secondAttribute="centerY" id="d5P-Wd-J41"/>
                             <constraint firstItem="kXY-4w-rb9" firstAttribute="centerX" secondItem="eHU-LK-CTt" secondAttribute="centerX" id="eWf-lK-3GX"/>

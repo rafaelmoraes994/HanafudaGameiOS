@@ -95,7 +95,7 @@ class GameController {
         nextPlayer = Player(name: opponent, handCards: [], comboCards: [])
     }
     
-    func checkMatchExistance(card: Card) -> Bool{
+    func checkMatchExistance(_ card: Card) -> Bool{
         var tableCards = cardPositionArrays[CardPosition.TableCard.rawValue]
         for i in 0..<tableCards.count {
             if card.month == tableCards[i].month {
@@ -105,4 +105,16 @@ class GameController {
         return false
     }
     
+    func verifyMatch(_ tableCard: Card, _ selectedCardIndex: Int) -> Bool{
+        print(selectedCardIndex)
+        if selectedCardIndex < 0 || selectedCardIndex > cardPositionArrays[CardPosition.PlayerHand.rawValue].count{
+            return true
+        } else {
+            let selectedCard = cardPositionArrays[CardPosition.PlayerHand.rawValue][selectedCardIndex]
+            if tableCard.month == selectedCard.month {
+                return true
+            }
+        }
+        return false
+    }
 }

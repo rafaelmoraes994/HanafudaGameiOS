@@ -25,7 +25,7 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
     @IBOutlet weak var opponentHandCards: UICollectionView!
     
     var dragAndDropManager : DragAndDropManager?
-    var selectedCard: Int = -1
+    var selectedCardIndex: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +63,9 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
             configuration.spacing = -20
             configuration.rotateFactor = 0.1
             configuration.cellSize = CGSize(width: 55, height: 88)
-            let collectionViewInsets = UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 0.0)
+            let collectionViewInsets = UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 0.0)
             collectionView.contentInset = collectionViewInsets
-            
+
             if collectionView == opponentHandCards {
                 collectionView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             }
@@ -97,23 +97,6 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
         self.opponentCommonCards.register(UINib(nibName: "CardCell", bundle: nil), forCellWithReuseIdentifier: "cardCell")
         self.opponentHandCards.register(UINib(nibName: "CardCell", bundle: nil), forCellWithReuseIdentifier: "cardCell")
     }
-
-//    func handleLongGesture(gesture: UILongPressGestureRecognizer) {
-//        switch(gesture.state) {
-//
-//        case .began:
-//            guard let selectedIndexPath = playerHandCards.indexPathForItem(at: gesture.location(in: playerHandCards)) else {
-//                break
-//            }
-//            playerHandCards.beginInteractiveMovementForItem(at: selectedIndexPath)
-//        case .changed:
-//            playerHandCards.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
-//        case .ended:
-//            playerHandCards.endInteractiveMovement()
-//        default:
-//            playerHandCards.cancelInteractiveMovement()
-//        }
-//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return GameController.shared.cardPositionArrays[collectionView.tag].count
@@ -130,21 +113,26 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
             cell.cardImage.image = #imageLiteral(resourceName: "Card-Back")
             cell.layer.borderColor = UIColor.black.cgColor
             cell.layer.borderWidth = 1.0
-        } else if collectionView.tag == CardPosition.PlayerHand.rawValue {
+        } else {
             cell.cardImage.image = card.image
-            if GameController.shared.checkMatchExistance(card: card) {
+        }
+        if collectionView.tag == CardPosition.PlayerHand.rawValue {
+            if GameController.shared.checkMatchExistance(card) {
                 CardController.shared.setCardLayerDesign(card: cell, shadowRadius: 3.0, borderWidth: 2.0)
             }
-            if indexPath.row == selectedCard {
+            if indexPath.row == selectedCardIndex {
                 if let cv = collectionView as? KDDragAndDropCollectionView {
                     if cv.shouldAnimate == true {
                         cell.shouldAnimate = true
-                        print("CellForItem \(indexPath.row) \(cell)")
                     }
                 }
             }
-        } else {
-            cell.cardImage.image = GameController.shared.cardPositionArrays[collectionView.tag][indexPath.row].image
+        } else if collectionView.tag == CardPosition.TableCard.rawValue{
+            if GameController.shared.verifyMatch(card, selectedCardIndex){
+                cell.overlay.isHidden = true
+            } else {
+                cell.overlay.isHidden = false
+            }
         }
         return cell
     }
@@ -152,8 +140,12 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cardLayout = collectionView.collectionViewLayout as? CardCustomCollectionViewLayout {
             cardLayout.selectedIndex = CGFloat(indexPath.row)
-            selectedCard = Int(cardLayout.selectedIndex)
+            selectedCardIndex = Int(cardLayout.selectedIndex)
+            //reload PlayerHand
             collectionView.reloadData()
+            //reload TableCards
+            tableCards.reloadData()
+            
         }
     }
     
@@ -204,16 +196,7 @@ class GameBoardViewController: UIViewController, UICollectionViewDelegate, KDDra
     func didChangeSelectedIndex(_ indexPath: IndexPath) {
         if let cardLayout = playerHandCards.collectionViewLayout as? CardCustomCollectionViewLayout {
             cardLayout.selectedIndex = CGFloat(indexPath.row)
-            selectedCard = Int(cardLayout.selectedIndex)
+            selectedCardIndex = Int(cardLayout.selectedIndex)
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-//        print("Starting Index: \(sourceIndexPath.item)")
-//        print("Ending Index: \(destinationIndexPath.item)")
-//    }
 }

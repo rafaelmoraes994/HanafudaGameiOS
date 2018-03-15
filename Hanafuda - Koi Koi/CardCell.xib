@@ -18,17 +18,27 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szp-5c-NQQ">
                     <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                 </imageView>
+                <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JV9-Om-W49">
+                    <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="JV9-Om-W49" firstAttribute="centerY" secondItem="szp-5c-NQQ" secondAttribute="centerY" id="7dG-tR-bvg"/>
                 <constraint firstItem="szp-5c-NQQ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="9SI-Yo-gpK"/>
+                <constraint firstItem="JV9-Om-W49" firstAttribute="height" secondItem="szp-5c-NQQ" secondAttribute="height" id="JTT-YM-MFE"/>
                 <constraint firstItem="szp-5c-NQQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WD2-d8-nes"/>
                 <constraint firstItem="szp-5c-NQQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="ZM2-3d-Ssw"/>
+                <constraint firstItem="JV9-Om-W49" firstAttribute="width" secondItem="szp-5c-NQQ" secondAttribute="width" id="bfl-l8-ZWC"/>
                 <constraint firstItem="szp-5c-NQQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="noa-U7-T3d"/>
+                <constraint firstItem="JV9-Om-W49" firstAttribute="centerX" secondItem="szp-5c-NQQ" secondAttribute="centerX" id="rLp-Dc-Nce"/>
             </constraints>
             <connections>
                 <outlet property="cardImage" destination="szp-5c-NQQ" id="VNz-vb-023"/>
+                <outlet property="overlay" destination="JV9-Om-W49" id="5R1-CH-c0f"/>
             </connections>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
 </document>
